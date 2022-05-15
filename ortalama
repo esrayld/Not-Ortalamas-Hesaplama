@@ -1,0 +1,36 @@
+package not.ortalaması.hesaplama;
+
+import java.util.Scanner;
+
+public class NotOrtalamasıHesaplama {
+   public static void main(String[] args) {
+   
+       int mat,fiz,kim,trk,mzk,trh;
+       
+      Scanner keyboard= new Scanner(System.in);
+      
+       System.out.print("Matematik Notu: ");
+       mat=keyboard.nextInt();
+      
+       System.out.print("Fizik Notu: ");
+       fiz=keyboard.nextInt();
+       
+       System.out.print("Kimya Notu: ");
+       kim=keyboard.nextInt();
+       
+       System.out.print("Türkçe Notu: ");
+       trk=keyboard.nextInt();
+       
+       System.out.print("Müzik Notu: ");
+       mzk=keyboard.nextInt();
+       
+       System.out.print("Tarih Notu: ");
+       trh=keyboard.nextInt();
+   
+      int toplam= (mat+fiz+kim+trk+mzk+trh);
+      double ortalama= toplam/6;
+        
+       System.out.println("Not ortalaması: "+ortalama);
+      
+       String sonuc = ortalama >60? "Sınıfı Geçti":"Sınıfta Kaldı"; 
+       System.out.println(sonuc);    
